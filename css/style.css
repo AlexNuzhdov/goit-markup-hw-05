@@ -11,11 +11,11 @@
 html{
 box-sizing: border-box;
 }
-/* *,
+*,
 *::before,
 *::after {
 box-sizing: inherit;
-} */
+}
 
 
 body{
@@ -95,17 +95,21 @@ body{
     letter-spacing: 0.02em;
     text-decoration: none;
     
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+
 }
+/* transition: background-color 3000ms cubic-bezier(0.4, 0, 0.2, 1); */
 
 .site-nav .item + .item {
     margin-left: 50px;
 }
 
 /* site-nav hover */
- .link:hover:after,
- .link:focus::after { 
-   opacity: 1;
-}
+ 
 .link:hover,
 .link:focus{
     color: var(--accent-color);
@@ -115,22 +119,35 @@ body{
 
 .link{
 position: relative;
+
 }
 
 .link::after{
  content: "";
  position: absolute;
- border: 1px solid var(--accent-color);
+ border: 1px solid var(--primary-text-color);
  border-radius: 2px;
- background-color:var(--accent-color);
+ background-color: var(--primary-text-color);
  bottom: -1px;
  left: 0;
  width: 44px;
  height: 4px;
  width: 100%;
  opacity: 0;
+
+ transition-property: background-color;
+ transition-duration: 250ms;
+ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ 
+
+}
+ .link:hover:after,
+ .link:focus::after { 
+     background-color: #2196F3;
+     border: #2196F3;
+     opacity: 1;
   
- }
+}
 
 
 /* Footer contact-items*/
@@ -155,6 +172,10 @@ position: relative;
     text-decoration: none;
      margin: 0;
      padding: 0;
+
+     transition-property: color;
+     transition-duration: 250ms;
+     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 .icon-mail{
@@ -277,8 +298,13 @@ position: relative;
     line-height: 1.7;
     letter-spacing: 0.03em;
     text-decoration: none;
-  
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
+
 /*Отступы*/
 .desc:not(:last-child){
     margin-bottom: 10px;
@@ -314,9 +340,8 @@ position: relative;
     color: #FFFFFF;
     padding: 0;
     margin: 0;
-   
-   
 }
+
 .icon-tab {
     display: block;
     width: 44px;
@@ -329,23 +354,15 @@ position: relative;
    
 }
 
-
-
-
 .internet-links{
     padding:0;
     margin-top: 20px;
     text-align: center;
     display: flex;
     margin-bottom: 0;
-    
-
 }
 
    
-
-
-
 /*feature-list*/
 .feature-list .title{
     color: var(--primary-text-color);
@@ -489,6 +506,10 @@ position: relative;
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: var(--secondary-color);
+
+    
+
+    
 }
 /* "Эффект тени*/
 .desc-content{
@@ -496,7 +517,6 @@ position: relative;
     0px 1px 1px rgba(0, 0, 0, 0.14), 
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-
     
 }
 
@@ -514,6 +534,8 @@ position: relative;
     width: 20px;
     height: 20px;
     fill:#FFFFFF;
+
+   
 }
 
 
@@ -555,6 +577,12 @@ position: relative;
     padding: 0;
     margin: 0;
     background-color: #FFFFFF;
+
+    transition-property:background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+   
 }
 
 /* HOVER и FOCUS кнопок социальной сети*/
@@ -577,6 +605,8 @@ position: relative;
 .team-social-links:hover,
 .team-social-links:focus{
     background-color: #2196F3;  
+    
+    
 }
 
 .social-links{
@@ -620,7 +650,14 @@ position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+
+     
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+
 }
  .button-icon-links:hover,
  .button-icon-links:focus{
@@ -633,8 +670,10 @@ position: relative;
     width: 20px;
     height: 20px;
     fill:#AFB1B8;
+
    
 }
+
 .team-twiter{
     padding: 0;
     width: 20px;
@@ -688,12 +727,8 @@ position: relative;
     position: absolute;
     bottom: 0;
     width: 370px;
-    /* opacity: 0;
-    transition: 100ms opacity linear;
-   */
+   
 }
-
-
 
 .heading-project{
     margin: 0;
@@ -714,23 +749,12 @@ position: relative;
 .item-card{
  position: relative;
 }
-/* .item-card:hover .card-thumb-project{
-    opacity: 1;
-} */
 
 /* box-project padding*/
 .box-project{
    padding-bottom: 94px;
 
 }
-/* ЧЕМ МЫ ЗАНИМАЕМСЯ Section*/
-/* .product-action{
-  
-     margin: 0;
-    padding: 0;
-   
-   
-} */
 
 
 /*project portfolio*/
@@ -791,6 +815,12 @@ position: relative;
     font-size: 16px;
     line-height: 1.89;
     letter-spacing: 0.06em;  
+
+     
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   
 }
 
@@ -813,8 +843,14 @@ position: relative;
     text-align: center;
     letter-spacing: 0.03em;
     text-decoration: none;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
+
 }
+
 .button:hover, 
 .button:focus{
     background-color: var(--accent-color);
@@ -855,7 +891,6 @@ position: relative;
 /* card-set */
 
 .card-set{
-    
     padding: 0;
     margin: 0;
     list-style: none;
@@ -865,6 +900,7 @@ position: relative;
     margin-left: -30px;
     margin-top: -30px;
 }
+
 .card-text-thumb{
     margin: 0;
     position: absolute;
@@ -879,28 +915,39 @@ position: relative;
     top:0;
     bottom: 0;
     width: 100%;
-    background: rgba(33, 150, 243, 0.9);
-    opacity: 0;
+    background-color: rgba(33, 150, 243, 0.9);
+    opacity: 1;
+
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
+
 .card-thumb{
     position: relative;
-    list-style: none;
+    overflow: hidden;
 }
-.card-thumb:hover .card-text-thumb{
-   
+.list:hover .card-text-thumb{
+    transform: translateY(0);
     opacity: 1;
-    transition: 250ms opacity linear;
-
+   
 }
-
-
-
+/* HOVER ТЕНИ*/
+.list{
+   
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .list:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
-    0px 4px 4px rgba(0, 0, 0, 0.06),
+     0px 4px 4px rgba(0, 0, 0, 0.06),
      1px 4px 6px rgba(0, 0, 0, 0.16);
-
     cursor: pointer;
 }
 
@@ -909,9 +956,8 @@ position: relative;
     flex-basis: calc(100% / 3 - 30px);
     margin-top: 30px;
     margin-left: 30px;
-
-  
 }
+
 /* Паддинги катрочек портфолио*/
 .card-сontent {
     padding-top: 20px;
@@ -937,7 +983,6 @@ img {
     
     margin-top: 4px;
     margin-bottom: 0;
-   
 }
 
 .list  .title{
@@ -948,7 +993,6 @@ img {
 
     margin-top: 0;
     margin-bottom: 0;
-    
 }
 
 /* Padding project*/
@@ -975,12 +1019,18 @@ img {
     border: none;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+
+    transition-property:  background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   
 }
+
 /* hover и focus постоянные клиенты*/
 .client-button:hover .logo-1,
 .client-button:focus .logo-1{
     fill: #2196F3;
-   
+    
 }
 .client-button:hover{
     border-color: #2196F3;
@@ -992,12 +1042,15 @@ img {
     padding: auto;
     margin: auto;
     fill: var(--color-icon);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
 
 .clients-top:not(:last-child){
     margin-right: 30px;
+   
 }
 
 .client-list{
@@ -1007,14 +1060,58 @@ img {
     margin: 0;
 }
 
-
-
 .client{
     padding-top: 94px;
     padding-bottom: 94px;
-    
 }
+
 .icon-instagram:focus .team-instagram{
  fill:#2196F3;
 
+}
+/*МОДАЛЬНОЕ ОКНО*/
+.backdrop{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    top:0;
+    left:0;
+}
+.modal{
+    width: 528px;
+    height: 581px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    position: relative;
+    
+}
+.backdrop.is-hidden {
+ opacity: 0;
+ pointer-events: none;
+}
+.button-modal{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    top:8px;
+    right: 8px;
+    background-color: #FFFFFF;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+   
+   
+}
+
+.tab-close{
+    width: 12px;
+    height: 12px;
+    background-color: #FFFFFF;
 }
